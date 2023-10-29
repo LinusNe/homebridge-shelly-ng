@@ -1,11 +1,12 @@
 {
-  "name": "homebridge-shelly-ng",
+  "name": "homebridge-linusne-shelly-ng",
   "version": "1.6.0",
   "description": "Homebridge plugin for the next generation of Shelly devices",
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf ./dist && tsc",
     "lint": "eslint ./src --ext .ts,.js --max-warnings=0",
+    "watch": "npm run build && npm link && nodemon",
     "test": "jest",
     "preversion": "npm run build && npm run lint",
     "postversion": "git push && git push --tags"
@@ -16,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexryd/homebridge-shelly-ng.git"
+    "url": "git+https://github.com/linusne/homebridge-shelly-ng.git"
   },
   "keywords": [
     "homebridge",
@@ -25,14 +26,6 @@
   ],
   "author": "Alexander Rydén",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/alexryd/homebridge-shelly-ng/issues"
-  },
-  "homepage": "https://github.com/alexryd/homebridge-shelly-ng#readme",
-  "funding": {
-    "type": "kofi",
-    "url": "https://ko-fi.com/alexryd"
-  },
   "devDependencies": {
     "@types/jest": "^28.1.2",
     "@types/node": "^18.0.0",
@@ -40,6 +33,7 @@
     "@typescript-eslint/parser": "^5.28.0",
     "eslint": "^8.18.0",
     "homebridge": "^1.5.0",
+    "nodemon": "^2.0.22",
     "jest": "^28.1.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.5",

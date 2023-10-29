@@ -26,7 +26,7 @@ export class CoverAbility extends Ability {
     } else if (this.type === 'windowCovering') {
       return this.Service.WindowCovering;
     }
-    return this.Service.Window;
+    return this.Service.WindowCovering;
   }
 
   /**

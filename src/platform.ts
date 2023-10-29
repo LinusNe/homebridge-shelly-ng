@@ -26,7 +26,7 @@ type AccessoryUuid = string;
 /**
  * The name of this plugin.
  */
-export const PLUGIN_NAME = 'homebridge-shelly-ng';
+export const PLUGIN_NAME = 'homebridge-linusne-shelly-ng';
 
 /**
  * The name of this homebridge platform.
